@@ -1,0 +1,132 @@
+p {
+    padding: 0;
+    margin: 0;
+}
+
+.wrap-container::before {
+    content: '';
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: url(./img/lemonade.png);
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+    background-position: center;
+    filter: blur(7px);
+}
+
+.player-container {
+    margin: 100px auto;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 10px black;
+    border-radius: 10px;
+    width: 300px;
+    height: 400px;
+}
+
+.image {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 70%;
+    background-image: url(./img/lemonade.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.player {
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(to right, #696969,  #C0C0C0) ;
+    width: 100%;
+    height: 30%;
+}
+
+.custum {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.play {
+    background-image: url(./svg/play.png);
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   cursor: pointer;
+}
+
+.play.pouse {
+    background-image: url(./svg/pause.png);  
+}
+
+.tittle {
+    color: rgb(170, 253, 5);
+}
+
+.back {
+    background-image: url(./svg/backward.png);
+    width: 20px;
+    height: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border: 1px solid red; */
+    cursor: pointer;
+}
+
+.straight {
+    background-image: url(./svg/forward.png);
+    width: 20px;
+    height: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border: 1px solid red; */
+    cursor: pointer;
+}
+
+.rewind {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ranger {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-container {
+    width: 150px;
+    border-radius: 5px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid rgb(170, 253, 5);
+}
+
+.progress {
+    background-color: #283C5B;
+    border-radius: 5px;
+    height: 6px;
+}
+
+.curent {
+    margin-right: 10px;
+}
+
+.full-time {
+    margin-left: 10px;
+}

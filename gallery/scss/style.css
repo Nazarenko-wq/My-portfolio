@@ -1,0 +1,135 @@
+body {
+  font-family: sans-serif;
+  position: relative;
+  background-color: #4b4747;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 200px;
+  height: 100vh;
+  overflow: auto;
+}
+
+label {
+  cursor: pointer;
+  font-size: 20px;
+  color: #777;
+}
+label img {
+  width: 150px;
+}
+
+h1 {
+  position: absolute;
+  left: 230px;
+  top: 30px;
+  color: white;
+}
+
+.block {
+  position: absolute;
+  left: 250px;
+  top: 100px;
+  margin-top: 20px;
+  width: 80%;
+  height: 80vh;
+  background-color: #4b4747;
+  background-image: url(../img/1.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#img1,
+#img2,
+#img3,
+#img4,
+#img5,
+#img6,
+#img7,
+#img8,
+#img9,
+#img10,
+#img11 {
+  display: none;
+}
+
+#img1:checked ~ .block {
+  background-image: url(../img/1.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#img2:checked ~ .block {
+  background-image: url(../img/2.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#img3:checked ~ .block {
+  background-image: url(../img/3.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#img4:checked ~ .block {
+  background-image: url(../img/4.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#img5:checked ~ .block {
+  background-image: url(../img/5.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#img6:checked ~ .block {
+  background-image: url(../img/6.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#img7:checked ~ .block {
+  background-image: url(../img/7.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#img8:checked ~ .block {
+  background-image: url(../img/8.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#img9:checked ~ .block {
+  background-image: url(../img/9.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#img10:checked ~ .block {
+  background-image: url(../img/10.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#img11:checked ~ .block {
+  background-image: url(../img/11.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

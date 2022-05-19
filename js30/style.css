@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+.header-container {
+    background-color: black;
+    color: white;
+    min-height: 40px;
+}
+
+.head-container {
+    margin: 0 auto;
+    max-width: 1440px;
+    min-height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    background-image: url(./assets/svg/bird.svg);
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 35px;
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+    transition: 1s;
+}
+
+.logo:hover {
+    cursor: pointer;
+     filter: invert(260%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+.nav-list {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-li{
+    transition: 0.5s;
+}
+
+.nav-li:hover {
+    color: #BDAE82;
+    cursor: pointer;
+}
+
+.nav-li.active {
+    color: #BDAE82;
+}
+
+.main-container {
+    height:calc(100vh - 80px);
+    background-image: url(./assets/img/forest.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    margin: 0 auto;
+    height:inherit;
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.play{
+    /* border: 1px solid red; */
+    width: 131px;
+    height: 131px;
+    background-color: transparent;
+    background-image:url(./assets/svg/play1.svg);
+    filter: invert(90%) sepia(20%) saturate(638%) hue-rotate(7deg) brightness(89%)
+    contrast(40%);
+    transition: 1s;
+}
+
+.play:hover {
+    cursor: pointer;
+    filter: invert(90%) sepia(20%) saturate(638%) hue-rotate(7deg) brightness(89%)
+    contrast(20%);
+}
+
+.play.activePlay {
+    background-image:url(./assets/svg/pause.svg);
+}
+
+.footer-container {
+    background-color: black;
+    color: white;
+    min-height: 40px;
+}
+
+.foot-content {
+    margin: 0 auto;
+    /* border: 1px solid blue; */
+    max-width: 1440px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 40px;
+
+}
+
+.git-link {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.foot-link {
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.foot-link:hover {
+    color: #BDAE82;
+}
+
+.rs-logo {
+    width: 70px;
+    filter:  brightness(0) invert(1);
+}
+
+.rs-link {
+    transition: 0.5s;
+}
+
+.rs-link:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
