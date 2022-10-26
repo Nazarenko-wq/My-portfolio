@@ -1,0 +1,1553 @@
+html {
+    scroll-behavior: smooth;
+}
+
+%nav-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+}
+
+%h2-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    color: #333B41;
+}
+
+%h3-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+%p-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #333B41;
+}
+
+%p-card {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 120%;
+    color: #000000;
+}
+
+%btn {
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border-radius: 25px;
+    width: 300px;
+    height: 54px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:hover {
+        background: #E47209;
+        cursor: pointer;
+    }
+}
+
+body{
+
+    .darck-bg {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        background-color: rgba(41,41,41, 0.8);
+        z-index: 3;
+        display: none;
+    }
+
+    .wraper {
+        // outline: 1px solid red;
+        width: 100%;
+        max-width: 1600px;
+        height: auto;
+        margin: 0 auto;
+
+        .wrap-header {
+            background-color: black;
+            color: white;
+            width: 100%;
+
+            header {
+                width: 100%;
+                max-width: 1220px;
+                height: 80px;
+                margin: 0 auto;
+                padding: 0 30px;
+                // outline: 1px solid greenyellow;
+
+                display: flex;
+                align-items: center;
+
+                .wraper-nav {
+                    max-width: 617px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    // outline: 1px solid blanchedalmond;
+                    justify-content: space-between;
+
+                    .logo-block {
+                        position: relative;
+                        width: 82px;
+                        height: 52px;
+                        border: 1px solid #FFFFFF;
+                        border-radius: 2px;
+                        padding-top: 3px;
+    
+                        h1 {
+                            a {
+                                font-family: 'Roboto';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 19.0145px;
+                                line-height: 120%;
+                                color: #FFFFFF;
+                            }
+                            text-align: center;
+                        }
+    
+                        .stick {
+                            position: absolute;
+                            left: 9px;
+                            bottom: 6px;
+                        }
+                    }
+    
+                    nav {
+                        height: auto;
+                        
+                        ul {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 472px;
+    
+                            li {
+                                transition: all 0.5s;
+                                .activeLink {
+                                   color: #F9804B;
+                                }
+                                a {
+                                 @extend %nav-text;   
+                                }
+
+                                &:hover {
+                                    transform: scale(1.1);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .copyrigh {
+                    margin-left: auto;
+
+                    p {
+                        a {
+                            @extend %nav-text;
+                        }
+                    }
+                }
+
+                .burger-icon {
+                    display: none;
+                }
+
+                .burger-menu {
+                    display: none;
+                }
+            }
+        }
+
+        @media (max-width: 1599px) {
+            .wrap-header {
+                header {
+                    .wraper-nav {
+                        max-width: 576px;
+
+                        nav { 
+                            ul {
+                                width: 431px;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 999px) {
+            .wrap-header {
+                header {
+                    height: 34px;
+                    padding: 0 20px 0 20px;
+                    position: fixed;
+                    z-index: 10;
+                    background-color: black;
+                    top: 0px;
+                    
+                    .wraper-nav {
+
+                        .logo-block {
+                            width: 46.86px;
+                            height: 29.03px;
+                            border: none;
+                            padding: 0;
+                            margin-bottom: 5px;
+
+                            .stick {
+                                width: 4.54px;
+                                height: 13.56px;
+                                left: 4px;
+                                bottom: 0px;
+                            }
+
+                            h1 {
+                                a {
+                                    font-size: 12.2899px;
+                                    line-height: 0;
+                                }
+                            }
+                        }
+
+                        nav { 
+                           display: none;
+                        }
+                    }
+    
+                    .copyrigh {
+                        display: none;
+                    }
+
+                    .burger-icon {
+                        display: block;
+                        width: 18px;
+                        height: 10px;
+                        position: absolute;
+                        top: 33%;
+                        right: 20px;
+                        cursor: pointer;
+
+                        .rectangl {
+                            width: 100%;
+                            height: 2px;
+                            background-color: white;
+                        }
+
+                        .rect1, .rect2 {
+                            margin-bottom: 2px;
+                        }
+                    }
+
+                    .burger-menu {
+                        position: relative;
+                        display: block;
+                        max-width: 640px;
+                        width: 100%;
+                        height: auto;
+                        position: fixed;
+                        right: -1000px;
+                        top: 0;
+                        background-color: white;
+                        transition: all 2s;
+
+                        .closeicon {
+                            position: absolute;
+                            right: 15px;
+                            top: 15px;
+                            cursor: pointer;
+
+                            .first-stick {
+                                width: 15px;
+                                height: 2px;
+                                transform: rotateZ(45deg);
+                                background-color: #333B41;
+                                border-radius: 2px;
+                            }
+
+                            .second-stick {
+                                width: 15px;
+                                height: 2px;
+                                transform: rotateZ(-45deg);
+                                background-color: #333B41;
+                                border-radius: 2px;
+                            }
+                        }
+    
+                        .wrapper-burger {
+                            margin: 10px 0 43px 10px;
+                            .burger-logo-block {
+                                position: relative;
+                                width: 65.6px;
+                                height: 41.6px;
+                                border: 0.8px solid #FE9013;
+                                border-radius: 2px;
+                                padding-top: 3px;
+                                margin: 0 0 30px 0;
+                                cursor: pointer;
+            
+                                h1 {
+        
+                                    a {
+                                        font-family: 'Roboto';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 15.2116px;
+                                        line-height: 120%;
+                                        color: #FE9013;
+                                    }
+                                    text-align: center;
+                                }
+            
+                                .stick {
+                                    position: absolute;
+                                    left: 9px;
+                                    bottom: 6px;
+                                }
+                            }
+
+                            .burger-ul {
+                                li {
+                                    margin:  0 0 14px 0;
+                                    a {
+                                        font-family: 'Roboto';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 16px;
+                                        line-height: 140%;
+                                        color: #333B41;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .activeBurger {
+                        right: 0;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 639px) {
+            .wrap-header {
+                header {
+                    padding: 0 10px 0 10px;
+                    .wraper-nav {
+                        max-width: 200px;
+                    }
+
+                    .burger-icon {
+                        top: 33%;
+                        right: 11px;
+                    }
+                }
+            }
+        }
+
+        // Online section
+        .onlineBlock {
+            background-image: url(../../images/pandaDonate.png);
+            background-repeat: no-repeat;
+            background-position: 50% 100%;
+            background-size: cover;
+            width: 100%;
+            height: 388px;
+
+            @media (max-width: 1599px) {
+                background-image: url(../../images/pandaDonate2.png);
+                height: 390px;
+            }
+
+            @media (max-width: 999px) {
+                background-image: url(../../images/pandaDonate3.png);
+                height: 335px;
+                margin-top: 34px;
+            }
+
+            @media (max-width: 639px) {
+                background-image: url(../../images/pandaDonate4.png);
+                height: 187px;
+            }
+
+        }
+
+        // Feed section
+        .feed {
+            width: 100%;
+            background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+            opacity: 0.9;
+            padding: 40px 0 180px 0;
+            display: flex;
+            justify-content: center;
+
+            .main-wrapper {
+                width: 100%;
+                max-width: 1160px;
+                height: inherit;
+                margin: 0 30px;
+
+                // outline: 1px solid green;
+
+                .donate-info {
+                    color: white;
+
+                    h2 {
+                        @extend %p-text;
+                        font-size: 36px;
+                        color: white;
+                        margin-bottom: 7px;
+                    }
+
+                    p {
+                        @extend %nav-text;
+                        margin-bottom: 48px;
+                    }
+
+                    h3 {
+                        @extend %p-text;
+                        font-size: 36px;
+                        color: #FE9013;
+                        margin-bottom: 58px;
+                    }
+                }
+
+                .wrapper-feed {
+                    padding: 41px 0 60px 0;
+                    background: rgba(253, 253, 255, 0.52);
+                    backdrop-filter: blur(2px);
+                    border-radius: 20px;
+                    box-sizing: border-box;
+    
+                    .feed-text {
+                        h2 {
+                            @extend %h2-text;
+                            color: #FE9013;
+                            text-align: center;
+                            margin-bottom: 20px;
+                            margin-right: 9px;
+                        }
+    
+                        .first-feed-sub {
+                            @extend %h2-text;
+                            font-size: 24px;
+                            margin-bottom: 60px;
+                        }
+    
+                        p {
+                            @extend %nav-text;
+                            line-height: 130%;
+                            color: #333B41;
+                            margin-left: 93px;
+                        }
+                    }
+    
+                    .pay-block {
+                        display: flex;
+                        flex-direction: column;
+                        // justify-content: center;
+                        align-items: center;
+                        
+                        .panda-block {
+                            max-width: 540.49px;
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .digit {
+                                box-sizing: border-box;
+                                .four {
+                                    font-family: 'Roboto';
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    font-size: 72px;
+                                    line-height: 80%;
+                                    text-align: center;
+                                    margin-top: 53px;
+                                }
+
+                                .four-subtittle {
+                                    @extend %p-text;
+                                    line-height: 140%;
+                                    margin-top: 9px;
+                                }
+                            }
+
+                            .sign {
+                                margin-right: 57px;
+                                margin-top: 29px;
+
+                                .x {
+                                    width: 14px;
+                                    height: 14px;
+                                }
+
+                                .x2 {
+                                    display: none;
+                                }
+                            }
+
+                            .panda-pic {
+                                margin-right: 10px;
+
+                                .panda2 {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        .amount {
+                            width: 100%;
+
+                            .amount-tityle {
+                                @extend %p-text;
+                                line-height: 140%;
+                                color: #000000;
+                                margin: 48px 0 16px 98px;
+                            }
+
+                            .range-wrapper {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+
+                                .range {
+                                    position: relative;
+                                    max-width: 976px;
+                                    width: 100%;
+                                    height: 27px;
+                                    background: #404950;
+                                    border-radius: 2px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    margin-bottom: 13px;
+
+                                    input[type=range] {
+                                        position: absolute;
+                                        display: block;
+                                        -webkit-appearance: none;
+                                        max-width: 945px;
+                                        width: 100%;
+                                        height: 2px;
+                                        background: transparent;
+                                        transform: rotateZ(180deg);
+                                    }
+
+                                    input[type=range]::-webkit-slider-thumb {
+                                        -webkit-appearance: none;
+                                        background: url(../../icons/rollerIcon.svg);
+                                        width: 40px;
+                                        height: 40px;
+                                        border-radius: 50%;
+                                        border: none;
+                                        cursor: pointer;
+                                        transition: .3s ease-in-out;
+            
+                                        &:hover {
+                                                        transform: scale(1.3);
+                                                        cursor: pointer;
+                                        }
+                                    }
+                                    
+                                    .line {
+                                        max-width: 915px;
+                                        width: 100%;
+                                        height: 2px;
+                                        background: #72828E;
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+    
+                                        .circle {
+                                            width: 10px;
+                                            height: 10px;
+                                            border-radius: 50%;
+                                            background: #FFEE2E;
+                                            transition: all 0.5s;
+
+                                            &:hover {
+                                                transform: scale(1.5);
+                                                cursor: pointer;
+                                            }
+                                        }
+    
+                                        // .pointCircle {
+    
+                                        //     .activeCircle {
+                                        //         width: 40px;
+                                        //         height: 40px;
+                                        //         background: transparent;
+                                        //         border: 1px solid #FE9013;
+                                        //         border-radius: 50%;
+    
+                                        //         display: flex;
+                                        //         justify-content: center;
+                                        //         align-items: center;
+                                        //         margin: -15px 0 0 -15px;
+                                                
+                                        //         .within {
+                                        //             width: 23px;
+                                        //             height: 23px;
+                                        //             background: transparent;
+                                        //             border: 1px solid #FE9013;
+                                        //             border-radius: 50%;
+                                        //         }
+                                        //     }
+                                        // }
+                                    }
+                                }
+    
+                                .quantity {
+                                    max-width: 976px;
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    margin-right: 0px;
+    
+                                    span {
+                                        @extend %h3-text;
+                                        font-size: 26px;
+                                        color:#333B41;
+                                    }
+    
+                                    .active-dollar {
+                                        color: #FE9013;
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                    .pay-forms {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        margin: 48px 0 0 0;
+
+                        form {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 100%;
+                            .input-block {
+                                position: relative;
+
+                                &::before {
+                                    position: absolute;
+                                    content: "";
+                                    width: 10px;
+                                    height: 20px;
+                                    top: 34%;
+                                    right: 10px;
+                                    background: url(../../icons/dollar.svg);
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                }
+
+                                input[type=number] {
+                                    width: 268px;
+                                    height: 54px;
+                                    box-sizing: border-box;
+                                    border: 1px solid #929699;
+                                    border-radius: 2px;
+                                    background: transparent;
+
+                                    @extend %p-text;
+                                    line-height: 140%;
+                                    color: #929699;
+                                    padding: 0 0 0 8px;
+                                }
+
+                                input[type=number]:focus {
+                                    border: 1px solid #4B9200;
+                                    color: #4B9200;
+                                }
+
+                                input::-webkit-outer-spin-button,
+                                input::-webkit-inner-spin-button {
+                                -webkit-appearance: none;
+                                margin: 0;
+                                }
+                            }
+
+                            .radio-box {
+                                max-width: 208px;
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                margin: 26px 5px 30px 0;
+
+                                .radio-btn {
+                                    margin-right: 13px;
+                                }
+
+                                input[type=radio] {
+                                   display: none;
+                                }
+
+                                label {
+                                    display: inline-block;
+                                    cursor: pointer;
+                                    position: relative;
+                                    padding-left: 25px;
+                                    margin-right: 0;
+                                    user-select: none;
+
+                                    @extend %p-text;
+                                    line-height: 140%;
+
+                                    &::before {
+                                        content: "";
+                                        display: inline-block;
+                                        width: 16px;
+                                        height: 16px;
+                                        position: absolute;
+                                        left: 0;
+                                        bottom: 4px;
+                                        border: 1px solid #FE9013;
+                                        border-radius: 50%;
+                                    }
+                                }
+
+                                input[type=radio]:checked + label::before {
+                                    border: none;
+                                    background: #4B9200;
+                                }
+                            }
+
+
+                            .feed-btn {
+                                @extend %btn;
+                                margin: 0 0 31px 12px;
+                            }
+                        }
+
+                        p {
+                            @extend %p-text;
+                            color: #333B41;
+                            margin: 0 0 3px 5px;
+                        }
+                    }
+                }
+            }
+
+            @media (max-width: 1599px) {
+                padding: 40px 0 30px 0;
+                .main-wrapper {
+                    width: 100%;
+                    max-width: 1060px;
+                    margin: 0 30px;
+                    .donate-info {
+                        h2 {
+                            width: 90%;
+                            margin-bottom: 31px;
+                        }
+    
+                        p {
+                            margin-bottom: 43px;
+                        }
+    
+                        h3 {
+                            margin-bottom: 41px;
+                        }
+                    }
+    
+                    .wrapper-feed {
+                        padding: 20px 0 44px 0;
+        
+                        .feed-text {
+                            h2 {
+                                margin-bottom: 11px;
+                                margin-right: 14px;
+                            }
+        
+                            .first-feed-sub {
+                                margin-bottom: 60px;
+                                margin-left: 47px;
+                            }
+                        }
+        
+                        .pay-block {
+                            .amount {
+                                .amount-tityle {
+                                    margin: 48px 0 16px 65px;
+                                }
+    
+                                .range-wrapper {
+                                    .range {
+                                        max-width: 810px;
+                                        width: 100%;
+                                        padding: 0 10px;
+        
+                                        .line {
+                                            max-width: 810px;
+                                            .circle1 {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+        
+                                    .quantity {
+                                        max-width: 810px;
+                                        width: 100%;
+
+                                        .dollar1 {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+        
+                        .pay-forms {
+                            margin: 48px 0 0 0;
+                        }
+                    }
+                }
+            }
+
+            @media (max-width: 999px) {
+                padding: 30px 0 46px 0;
+                .main-wrapper {
+                    width: 100%;
+                    max-width: 680px;
+                    margin: 0 20px;
+                    .donate-info {
+                        h2 {
+                            width: 100%;
+                            margin-bottom: 14px;
+                            font-size: 24px;
+                        }
+    
+                        p {
+                            margin-bottom: 29px;
+                        }
+    
+                        h3 {
+                            margin-bottom: 30px;
+                        }
+                    }
+    
+                    .wrapper-feed {
+                        padding: 30px 0 31px 0;
+                        width: 100%;
+        
+                        .feed-text {
+                            h2 {
+                                margin-bottom: 22px;
+                                margin-right: 3px;
+                            }
+        
+                            .first-feed-sub {
+                                margin-bottom: 48px;
+                                text-align: center;
+                                margin-left: -3px;
+                            }
+                        }
+        
+                        .pay-block {
+                            .amount {
+                                .amount-tityle {
+                                    margin: 41px 0 8px 9px;
+                                }
+    
+                                .range-wrapper {
+                                    .range {
+                                        max-width: 810px;
+                                        width: 100%;
+                                        padding: 0 10px;
+        
+                                        .line {
+                                            max-width: 810px;
+                                            width: 91%;
+                                            .circle2 {
+                                                display: none;
+                                            }
+
+                                            .circle3 {
+                                                display: none;
+                                            }
+                                        }
+                                        //     .pointCircle2 {
+                                        //         .activeCircle {
+                                        //             width: 40px;
+                                        //             height: 40px;
+                                        //             background: transparent;
+                                        //             border: 1px solid #FE9013;
+                                        //             border-radius: 50%;
+        
+                                        //             display: flex;
+                                        //             justify-content: center;
+                                        //             align-items: center;
+                                        //             margin: -15px 0 0 -15px;
+                                                    
+                                        //             .within {
+                                        //                 width: 23px;
+                                        //                 height: 23px;
+                                        //                 background: transparent;
+                                        //                 border: 1px solid #FE9013;
+                                        //                 border-radius: 50%;
+                                        //             }
+                                        //         }
+                                        //     }
+                                        // }
+                                    }
+        
+                                    .quantity {
+                                        max-width: 810px;
+                                        width: 95%;
+
+                                        .dollar2 {
+                                            display: none;
+                                        }
+
+                                        .dollar3 {
+                                            display: none;
+                                        }
+
+                                        .active-dollar2 {
+                                            color: #FE9013;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+        
+                        .pay-forms {
+                            margin: 48px 0 0 0;
+
+                            form {
+                                .input-block {
+
+                                    &::before {
+                                        top: 25%;
+                                        right: 11px;
+                                    }
+
+                                    input[type=number] {
+                                        width: 180px;
+                                        height: 42px;
+                                        padding: 0 0 0 4px;
+                                    }
+                                }
+    
+                                .radio-box {
+                                    margin: 30px 9px 29px 0;
+                                }
+    
+    
+                                .feed-btn {
+                                    margin: 0 0 31px 2px;
+                                }
+                            }
+
+                            p {
+                                margin: 0 0 0 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media (max-width: 639px) {
+                padding: 30px 0 22px 0;
+                .main-wrapper {
+                    width: 100%;
+                    max-width: 680px;
+                    margin: 0 20px;
+                    .donate-info {
+                        h2 {
+                            width: 100%;
+                            margin-bottom: 23px;
+                            font-size: 24px;
+                            line-height: 120%;
+                        }
+    
+                        p {
+                            margin-bottom: 29px;
+                            line-height: 137%;
+                        }
+    
+                        h3 {
+                            margin-bottom: 28px;
+                            font-size: 24px;
+                        }
+                    }
+    
+                    .wrapper-feed {
+                        padding: 20px 0 19px 0;
+                        width: 100%;
+        
+                        .feed-text {
+                            h2 {
+                                margin-bottom: 10px;
+                                margin-right: 3px;
+                                font-size: 24px;
+                            }
+        
+                            .first-feed-sub {
+                                margin-bottom: 0px;
+                                text-align: center;
+                                margin-left: -3px;
+                                font-size: 16px;
+                                line-height: 130%;
+                            }
+                        }
+        
+                        .pay-block {
+                            .panda-block {
+                                max-width: 320px;
+                                width: 100%;
+    
+                                .digit {
+                                    margin: 45px 0 0 0;
+                                    .four {
+                                        font-size: 40px;
+                                        margin: 0 0 0 0;
+                                    }
+    
+                                    .four-subtittle {
+                                        line-height: 140%;
+                                        margin-top: 9px;
+                                        font-size: 9.02255px;
+                                        width: 140%;
+                                    }
+                                }
+    
+                                .sign {
+                                    margin-right: 30px;
+                                    margin-top: 29px;
+    
+                                    .x2 {
+                                        display: block;
+                                        width: 8px;
+                                        height: 8px;
+                                    }
+
+                                    .x1 {
+                                        display: none;
+                                    }
+                                }
+    
+                                .panda-pic {
+                                    margin-right: 10px;
+                                    
+                                    .panda2 {
+                                        display: block;
+                                        margin: 12px -9px 0 0 ;
+                                    }
+
+                                    .panda1 {
+                                        display: none;
+                                    }
+                                }
+                            }
+                            .amount {
+                                .amount-tityle {
+                                    margin: 4px 0 8px 1px;
+                                }
+    
+                                .range-wrapper {
+                                    .range {
+                                        max-width: 810px;
+                                        width: 100%;
+                                        padding: 0 5px;
+                                        height: 13.5px;
+                                        margin-bottom: 8px;
+        
+                                        .line {
+                                            max-width: 810px;
+                                            width: 91%;
+                                            .circle2 {
+                                                display: none;
+                                            }
+
+                                            .circle {
+                                                width: 5px;
+                                                height: 5px;
+                                            }
+
+                                            .circle3 {
+                                                display: none;
+                                            }
+                                        }
+                                        //     .pointCircle2 {
+    
+                                        //         .activeCircle {
+                                        //             width: 20px;
+                                        //             height: 20px;
+                                        //             margin: -8px 0 0 -8px;
+                                                    
+                                        //             .within {
+                                        //                 width: 11.48px;
+                                        //                 height: 11.48px;
+                                        //             }
+                                        //         }
+                                        //     }
+                                        // }
+                                    }
+        
+                                    .quantity {
+                                        max-width: 810px;
+                                        width: 95%;
+
+                                        span {
+                                            font-size: 13px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+        
+                        .pay-forms {
+                            margin: 23px 0 0 0;
+
+                            form {
+                                
+                                .radio-box {
+                                    margin: 25px 9px 27px 0;
+                                }
+    
+    
+                                .feed-btn {
+                                    margin: 0 0 31px 2px;
+                                }
+                            }
+
+                            p {
+                                margin: 0 0 0 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //Footer section
+        .footer {
+            width: 100%;
+            background-color: black;
+
+            .wrapper-footer {
+                width: 100%;
+                max-width: 1220px;
+                height: inherit;
+                margin: 0 auto;
+                padding: 0 30px 0px 30px;
+                box-sizing: border-box;
+
+                // outline: 1px solid green;
+
+                footer {
+                    box-sizing: border-box;
+                    .first-footer-block {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        // padding: 30px 0 0 0;
+                        .footer-logo {
+                            position: relative;
+                            width: 82px;
+                            height: 52px;
+                            border: 1px solid #FFFFFF;
+                            border-radius: 2px;
+                            margin-top: 8px;
+        
+                            h1 {
+                                a {
+                                    font-family: 'Roboto';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 19.0145px;
+                                    line-height: 120%;
+                                    color: #FFFFFF;
+                                }
+
+                                text-align: center;
+                            }
+        
+                            .stick {
+                                position: absolute;
+                                left: 9px;
+                                bottom: 6px;
+                            }
+                        }
+
+                        .footer-sub {
+                            h3 {
+                                @extend %h2-text;
+                                font-size: 24px;
+                                color: #FFFFFF;
+                                padding: 41px 0 13px 0;
+                            }
+
+                            form {
+                                input[type=email] {
+                                    width: 228px;
+                                    height: 44px;
+                                    border: 1px solid #F9804B;
+                                    border-radius: 2px;
+                                    background: transparent;
+
+                                    @extend %p-text;
+                                    line-height: 140%;
+                                    color: #BDBDBD;
+                                    padding-left: 8px;
+                                }
+
+                                input[type=submit] {
+                                    width: 129px;
+                                    height: 42px;
+                                    border: 1px solid #D31414;;
+                                    border-radius: 5px;
+                                    background-color: #F1F3F2;
+                                    color: #D31414;;
+                                    margin-left: 4px;
+                                    cursor: pointer
+                                }
+                            }
+                        }
+
+                        .adaptive-network {
+                            display: none;
+                            position: absolute;
+                            right: 0;
+                            top: 13px;
+
+                            .icon-bgr {
+                                width: 26px;
+                                height: 26px;
+                                background: rgba(196, 196, 196, 0.5); 
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin: 0 0 20px 0;
+                                transition: all 0.5s;
+
+                                &:hover {
+                                    cursor: pointer;
+                                    transform: scale(1.1);
+                                }
+                            }
+                        }
+                    }
+
+                    .footer-btn {
+                        .donate-btn {
+                            @extend %btn;
+                            border-radius: 5px;
+                            margin-top: 33px;
+                        }
+                    }
+
+                    .last-footer-block {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .networks {
+                            margin-top: 47px;
+                            ul {
+                                li {
+                                    margin-bottom: 10px;
+                                    transition: all 0.5s;
+
+                                    &:hover {
+                                        transform: scale(1.1);
+                                        cursor: pointer;
+                                    }
+                                    a {
+                                        @extend %p-text;
+                                        line-height: 140%;
+                                        color: #FFFFFF;
+                                    }
+                                }
+
+                                .facebook::before {
+                                    display: inline-flex;
+                                    content: url(../../icons/facebook.svg);
+                                    width: 26px;
+                                    height: 26px;
+                                    background: rgba(196, 196, 196, 0.5); 
+                                    border-radius: 50%;
+                                    justify-content: center;
+                                    align-items: center;
+                                    margin-right: 13px;
+                                }
+
+                                .twitter::before {
+                                    display: inline-flex;
+                                    content: url(../../icons/twitter.svg);
+                                    width: 26px;
+                                    height: 26px;
+                                    background: rgba(196, 196, 196, 0.5); 
+                                    border-radius: 50%;
+                                    justify-content: center;
+                                    align-items: center;
+                                    margin-right: 13px;
+
+                                }
+
+                                .instagram::before {
+                                    display: inline-flex;
+                                    content: url(../../icons/instagram.svg);
+                                    width: 26px;
+                                    height: 26px;
+                                    background: rgba(196, 196, 196, 0.5); 
+                                    border-radius: 50%;
+                                    justify-content: center;
+                                    align-items: center;
+                                    margin-right: 13px;
+
+                                }
+
+                                .youTube::before {
+                                    display: inline-flex;
+                                    content: url(../../icons/youTube.svg);
+                                    width: 26px;
+                                    height: 26px;
+                                    background: rgba(196, 196, 196, 0.5); 
+                                    border-radius: 50%;
+                                    justify-content: center;
+                                    align-items: center;
+                                    margin-right: 13px;
+
+                                }
+                            }
+                        }
+
+                        .footer-navigator {
+                            height: auto;
+                            
+                            ul {
+                                display: flex;
+                                justify-content: space-between;
+                                width: 362px;
+                                margin: 157px 0 50px 120px;
+        
+                                li {
+                                    transition: all 0.5s;
+
+                                    &:hover {
+                                        transform: scale(1.1);
+                                        
+                                    }
+
+                                    .activeLink {
+                                        color: #F9804B;
+                                    }
+                                    a {
+                                        @extend %nav-text;   
+                                    }
+                                }
+                            }
+                        }
+
+                        .autor {
+                            font-family: 'Roboto';
+                            font-style: normal;
+                            font-weight: 100;
+                            font-size: 16px;
+                            line-height: 130%;
+                            color: #FFFFFF;
+
+                            margin-top: 128px;
+
+                            .autorName {
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media (max-width: 1599px) {
+                .wrapper-footer {
+                    width: 100%;
+                    max-width: 1060px;
+                    padding: 0 17px 0px 30px;
+
+                    footer {
+                        .first-footer-block {
+                            margin: 0 46px 0 0px;
+                        }
+    
+                        .footer-btn {
+                            margin: 0 0 0 0px;
+                            
+                        }
+    
+                        .last-footer-block {
+                            margin: 0 12px 0 0px;
+    
+                            .footer-navigator {
+                                
+                                ul {
+                                    width: 333px;
+                                    margin: 157px 0 50px 118px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media (max-width: 999px) {
+                .wrapper-footer {
+                    width: 100%;
+                    max-width: 680px;
+                    padding: 0 20px 0px 20px;
+
+                    footer {
+                        .first-footer-block {
+                            margin: 0 0px 0 0px;
+                            position: relative;
+
+                            .footer-logo {
+                                margin:  12px 0 0 0;
+                            }
+
+                            .footer-sub {
+                                display: none;
+                            }
+
+                            .adaptive-network {
+                                display: block;
+                            }
+                        }
+    
+                        .footer-btn {
+                            margin: 0 0 0 -2px;
+                            
+                        }
+    
+                        .last-footer-block {
+                            margin: 0 0 0 0px;
+    
+                            .networks {
+                                display: none;
+                            }
+    
+                            .footer-navigator {
+                                
+                                ul {
+                                    width: 298px;
+                                    margin: 97px 0 11px 0px;
+                                }
+                            }
+    
+                            .autor {
+    
+                                margin-top: 67px;
+    
+                                .autorName {
+                                    margin-bottom: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media (max-width: 639px) {
+                .wrapper-footer {
+                    width: 100%;
+                    max-width: 340px;
+                    padding: 0 10px 0px 10px;
+
+                    footer {
+                        .first-footer-block {
+                            margin: 0 0px 0 0px;
+                            position: static;
+                            flex-direction: column;
+                            box-sizing: border-box;
+
+                            .footer-logo {
+                                margin:  20px 0 30px 0;
+                                border: none;
+                                width: 128px;
+                                height: 23px;
+
+                                .stick {
+                                    left: 71px;
+                                    bottom: 5px;
+                                }
+                            }
+
+                            .adaptive-network {
+                                position: static;
+                                display: flex;
+                                max-width: 300px;
+                                width: 84%;
+                                justify-content: space-evenly;
+                            }
+                        }
+    
+                        .footer-btn {
+                            margin: 0 0 0 -2px;
+
+                            .donate-btn {
+                                margin-top: 10px;
+                            }
+                        }
+    
+                        .last-footer-block {
+                            margin: 0 0 0 0px;
+                            flex-direction: column-reverse;
+                            align-items: center;
+    
+                            .networks {
+                                display: none;
+                            }
+    
+                            .footer-navigator {
+                                
+                                ul {
+                                    width: 278px;
+                                    margin: 29px 0 21px 0px;
+                                }
+                            }
+    
+                            .autor {
+                                margin: 30px 0 0 84px;
+                                font-size: 15px;
+    
+                                .autorName {
+                                    margin-bottom: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
